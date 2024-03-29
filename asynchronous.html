@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // function asyncfunc1(){
+        //     return new Promise((resolve,reject)=>{
+        //         setTimeout(() => {
+        //             console.log("some data1");
+        //             resolve("success");
+        //         }, 4000);
+        //     });
+        // }
+        // function asyncfunc2(){
+        //     return new Promise((resolve,reject)=>{
+        //         setTimeout(() => {
+        //             console.log("some data2");
+        //             resolve("success");
+        //         }, 4000);
+        //     });
+        // }
+        // function api(){
+        //     return new Promise((resolve,reject)=>{
+        //        setTimeout(()=>{
+        //         console.log("weather data");
+        //        resolve(200);
+        //        },2000)
+        //     });
+        // }
+        // async function getweatherdata(){
+        //     await api();
+        //     await api();
+        // }
+         function getdata(dataid){
+         return new Promise((resolve,reject)=>{
+             setTimeout(() => {
+         console.log("data",dataid); 
+         resolve("success"); 
+        }, 2000);
+         })
+     }
+
+     //async await
+        (async function (){
+            await getdata(1);
+            await getdata(2);
+            await getdata(3);
+        })();
+        
+    //     // getdata(1).then((res)=>{
+    //     //     console.log(res);
+    //     //     getdata(2).then(()=>{
+    //     //         console.log(res);
+    //     //     })
+    //     // })
+
+
+    //         //promise chaining
+    //     getdata(1).then((res)=>{
+    //         return getdata(2);
+    //     }).then((res)=>{
+    //         return getdata(3)
+    //     }).then((res)=>{
+    //         console.log(res);
+    //     });
+        //callback hell
+        // console.log("fetching data1...");
+        // asyncfunc1().then((res)=>{
+        //     console.log("fetching data2...");
+        // asyncfunc2().then((res)=>{
+        //     console.log(res);
+        // });
+        // });
+       
+     /*   function getdata(dataid,getnextdata){
+        setTimeout(() => {
+        console.log("data",dataid); 
+        if(getnextdata){
+        getnextdata();
+        }
+       }, 2000);
+    } 
+    getdata(1,()=>{
+        getdata(2,()=>{
+            getdata(3) 
+        });
+    });*/
+    /*const getpromise=()=>{
+        return new Promise((resolve,reject)=>{
+            console.log("i am promise");
+           // resolve("123");
+           reject("error")
+        }); 
+    
+    promise.then((res)=>{
+        console.log("promise filfilled",res)
+    })
+
+    promise.catch((err)=>{
+        console.log("rejected",err);
+    })*/
+
+  /*  function getdata(dataid,getnextdata){
+        return new Promise((resolve,reject)=>{
+            setTimeout(() => {
+        console.log("data",dataid); 
+        resolve("success");
+        if(getnextdata){
+        getnextdata();
+        }
+       }, 5000);
+        })
+    }*/
+    //a js promise object can be:
+    //pending:the result is undefinned
+    //resolved:the result has a value(fulfilled)
+    //rejected:the result is an error object
+
+
+    </script>
+</body>
+</html>

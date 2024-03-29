@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <input type="url" placeholder="image" id="image">
+     <input type="text" placeholder="place" id="place">
+    <button>click</button>
+    
+<!-- <div class="parent">
+    <div class="day">monday</div>
+    <div class="day">tuesday</div>
+    <div class="day">wednesday</div>
+    <div class="day">thrusday</div>
+</div> -->
+    <script>
+        //  document.querySelector("button").onclick=()=>{
+        //      let x=document.querySelector("input").value;
+        //      let h=document.createElement("h1");
+        //      h.innerText=x;
+        //      document.body.appendchild(h);
+        //      document.querySelector("input").value="";
+        //      document.querySelector("input").focus;
+        //  }
+
+        document.querySelector("button").onclick=()=>{
+            let x=document.querySelector("#image").value;
+            let t=document.querySelector("#place").value;
+            let h=document.createElement("div");
+            let y=document.createElement('img');
+            let f=document.createElement("h4");
+
+            
+            y.src=x;
+               f.innerText=t;
+
+           
+
+            
+            h.appendChild(f);
+            h.appendChild(y);
+            document.body.appendChild(h);
+            document.querySelector("#image").value="";
+            document.querySelector("#place").value="";
+            document.querySelector("input").focus;
+        }
+        
+       // let parent=document.querySelector('.parent')
+        // console.log(parent.children);
+        // console.log(parent.children[1].innerHTML)
+
+        // for(let i=0;i<parent.children.length;i++){
+        //     console.log(parent.children[i].innerHTML);
+        // }
+        // console.log(parent.firstElementChild.innerHTML);
+        
+
+        // const dayone=document.querySelector('.day')
+        // console.log(dayone.parentElement); 
+
+     
+    </script>
+</body>
+</html>

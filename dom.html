@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <input type="text" placeholder="enter your number" id="inp1">
+    <input type="text" placeholder="enter your number" id="inp2">
+   <!-- <button id="btn">swap</button> -->
+   
+    <div class="dropdown">
+        <button id="dropdownBtn" class="dropbtn">Dropdown</button>
+        <div class="dropdown-content">
+          <a href="#" data-value="add">add</a>
+          <a href="#" data-value="sub">sub</a>
+          <a href="#" data-value="divide">divide</a>
+        </div>
+      </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+  const dropdownBtn = document.getElementById('dropdownBtn');
+  const dropdownContent = document.querySelector('.dropdown-content');
+
+  dropdownContent.addEventListener('click', function(event) {
+    if (event.target.tagName === 'A') {
+      const selectedOption = event.target.dataset.value;
+      dropdownBtn.textContent = selectedOption;
+    }
+  });
+}
+
+);
+
+console.log(document.querySelector("dropbtn").value);
+
+
+        
+      
+    </script>
+</body>
+</html>

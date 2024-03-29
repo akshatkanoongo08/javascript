@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="inp">
+    <button id="+" class="a">+</button>
+    <button id="-" class="a">-</button>
+    <button id="*" class="a">*</button> 
+    <button id="/" class="a">/</button>
+    <button id="clear" class="a">clear</button>
+    <button id="0" class="a">0</button>
+    <button id="1" class="a">1</button>
+    <button id="2" class="a">2</button>
+    <button id="3" class="a">3</button>
+    <button id="4" class="a">4</button>
+    <button id="5" class="a">5</button>
+    <button id="6" class="a">6</button>
+    <button id="7" class="a">7</button>
+    <button id="8" class="a">8</button>
+    <button id="9" class="a">9</button>
+    <button id="=" class="a">=</button>
+    <button id="clr" class="a">clr</button>
+    <button id="del" class="a">del</button>
+</body>
+<script>
+
+
+let c = document.getElementsByClassName("a");
+
+for(let i of c){
+    i.onclick = function(){
+
+        if(i.innerText=='='){
+        let m=document.getElementById("inp").value;
+        eval(m);
+        document.getElementById("inp").value=eval(m);
+
+    }
+ 
+    if(i.innerText=='clr'){
+        document.getElementById("inp").value='';
+    }
+    if(i.innerText=='del'){
+        let p=document.getElementById("inp").value;
+        
+        document.getElementById("inp").value=p.slice(0,-1);
+    }
+    
+    else{
+
+document.getElementById("inp").value += i.innerText;
+}
+       
+    }
+
+}
+
+
+ 
+</script>
+</html>

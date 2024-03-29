@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Two Divs Side by Side</title>
+<style>
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .form-container {
+    width: 45%;
+  }
+
+  .form-container form {
+    border: 1px solid #ccc;
+    padding: 20px;
+  }
+
+  .image-holder {
+    width: 45%;
+    border: 1px solid #ccc;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    
+  }
+
+  .image-holder img {
+    width: 200px;
+    height: 200px;
+    display: block;
+    margin-bottom: 10px;
+    border-radius: 50%; /* Makes the image circular */
+    overflow: hidden; /* Ensures the image stays within the circle */
+    margin-right: 3rem;
+  }
+
+  .details-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+  }
+
+  .details-list li {
+    margin-bottom: 10px;
+
+  }
+  
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="form-container">
+      <form>
+        <label for="image">Image:</label>
+        <input type="url" id="image" name="image"><br><br>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"><br><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"><br><br>
+        <label for="course">Course:</label>
+        <input type="text" id="course" name="course"><br><br>
+        <label for="mobile">Mobile:</label>
+        <input type="tel" id="mobile" name="mobile"><br><br>
+        
+      </form>
+    </div>
+    <div class="image-holder">
+      <img src="" alt="Image Placeholder" id="outimage">
+      <ul class="details-list">
+        <li>name:<span id="outname"></span></li>
+    
+        <li>Email:<span id="outemail"></span></li>
+
+        <li>Course:  <span id="outcourse"></span></li>
+      
+        <li>Mobile:  <span id="outmobile"></span> </li>
+      
+      </ul>
+    </div>>
+  </div>
+
+  <script>
+
+    // let d = document.querySelector("#name");
+    
+//   d.addEventListener('input',function(event){
+//     document.querySelector("#outname").innerHTML=event.target.value
+//   })
+// let e = document.querySelector("#email";)
+//    e.addEventListener('input',function(e2){
+//     document.querySelector("#outemail").innerHTML=e2.target.value
+//   })  
+//   document.addEventListener('input',function(e3){
+//     document.querySelector("#outcourse").innerHTML=e3.target.value
+//   })
+//   document.addEventListener('input',function(e4){
+//     document.querySelector("#outmobile").innerHTML=e4.target.value
+//   })
+
+document.querySelector("#name").oninput = function(event){
+    document.querySelector("#outname").innerHTML = event.target.value;
+}
+document.querySelector("#email").oninput=function(event){
+    document.querySelector("#outemail").innerHTML=event.target.value;
+}
+document.querySelector("#course").oninput=function(event){
+    document.querySelector("#outcourse").innerHTML=event.target.value;
+}
+document.querySelector("#mobile").oninput=function(event){
+    document.querySelector("#outmobile").innerHTML=event.target.value;
+}
+document.querySelector("#image").oninput=function(event){
+    document.querySelector("#outimage").src=event.target.value;
+}
+  </script>
+</body>
+</html>

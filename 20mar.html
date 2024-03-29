@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Divs Inside a Big Div</title>
+  <style>
+    .container {
+      display: flex;
+      justify-content: center; /* Align center horizontally */
+      align-items: center; /* Align center vertically */
+      flex-wrap: wrap;
+      gap: 10px;
+      padding: 20px;
+      border: 1px solid #ccc; /* Border for the big div */
+      max-width: 600px; /* Less wide big div */
+      margin: 0 auto; /* Center the big div on the page */
+    }
+
+    .box {
+      width: calc(25% - 10px); /* Adjust width as needed */
+      height: 100px; /* Adjust height as needed */
+      border: 1px solid #000; /* Border for each div */
+      box-sizing: border-box;
+    }
+
+    input {
+      width: 100%;
+      margin-bottom: 10px;
+      padding: 8px;
+      box-sizing: border-box;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <div class="box">6</div>
+    <div class="box">7</div>
+    <div class="box">8</div>
+    <input type="text" placeholder="Enter text" id="text">
+    <input type="number" placeholder="Enter number" id="number">
+    <button type="submit" id="submit">Submit</button>
+  </div>
+    
+  <script>
+    document.querySelector("#submit").onclick=function(){
+        let t=document.querySelector("#text").value;
+        let n=document.querySelector("#number").value;
+        if(n==1){
+            document.querySelectorAll(".box")[0].style=`background-color:${t};`
+        }
+        else if(n==2){
+            document.querySelectorAll(".box")[1].style=`background-color:${t};`
+        }
+        else if(n==3){
+            document.querySelectorAll(".box")[2].style=`background-color:${t};`
+        }
+        else if(n==4){
+            document.querySelectorAll(".box")[3].style=`background-color:${t};`
+        }
+        else if(n==5){
+            document.querySelectorAll(".box")[4].style=`background-color:${t};`
+        }
+        else if(n==6){
+            document.querySelectorAll(".box")[5].style=`background-color:${t};`
+        }
+        else if(n==7){
+            document.querySelectorAll(".box")[6].style=`background-color:${t};`
+        }
+        else if(n==8){
+            document.querySelectorAll(".box")[7].style=`background-color:${t};`
+        }
+        else{
+            alert("enter a number between 1 to 8");
+        }
+       
+    }
+  </script>
+</body>
+</html>
+
+
+

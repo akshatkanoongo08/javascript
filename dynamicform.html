@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0px;
+        padding: 0px;
+    }
+    .form{
+        margin:10px;
+        padding:10px;
+        border: 2px solid black;
+        width:400px;
+        display: inline-block;
+
+    }
+    .image{
+        margin:5px;
+        padding:5px;
+    }
+    .name{
+        margin: 5px;
+        padding:5px;
+    }
+    .course{
+        margin:5px;
+        padding:5px;
+    }
+    .mobile{
+        margin:5px;
+        padding:5px;
+    }
+    .output{
+        display: inline-block;
+        margin:5px;
+        padding:5px;
+        border: 2px solid black;
+        width:400px;
+    }
+    .details{
+        align-content: right;
+    }
+</style>
+<body>
+    <div class="form">
+        <form>
+            <div class="image">
+            <Label for="image">Image:<br></Label>
+            <input type="text" id="image" name="image"><br>
+            </div>
+            <div class="name">
+            <Label for="name">Name:<br></Label>
+            <input type="text" id="name" name="name" id="namee"><br>
+            </div>
+            <div class="email">
+            <Label for="email">Email:<br></Label>
+            <input type="email" id="email" name="email"><br>
+            </div>
+            <div class="course">
+            <Label for="course">Course:<br></Label>
+            <input type="text" id="course" name="course"><br>
+            </div>
+            <div class="mobile">
+            <Label for="mobile">Mobile:<br></Label>
+            <input type="number" id="mobile" name="mobile"><br>
+            </div>
+        </form>
+    </div>
+    <div class="output">
+        
+        <img src="" alt="input image" class="outputimg>
+        
+        <div class="details">
+        <ul type="pointer">
+            <li id="outputname">Name:</li>
+            <li>Email:</li>
+            <li>Course:</li>
+            <li>mobile No.</li>
+            
+        </ul>
+    </div>
+    </div>
+    <script>
+        
+         document.addEventListener('input',function(event){
+             let f=document.querySelector("#namee").innerText;
+             document.querySelector("#outputname").innerText+=f;
+         })
+
+        
+    </script>
+</body>
+</html>

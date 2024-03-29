@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+       
+        }
+        .a{
+            height:50px;
+            width:50px;
+            border:0.5px solid black;
+            border-radius: 200px;
+            display: inline-block;
+        }
+        .b{
+            height:50px;
+            width:50px;
+        }
+        .c{
+            height:50px;
+            width:50px;
+        }
+        .d{
+            height:50px;
+            width:50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="a"></div>
+    <div class="a"></div>
+    <div class="a"></div>
+    <div class="a"></div>
+    <div class="a"></div>
+    <div class="a"></div>
+    <div class="a"></div>
+
+    <div class="a"></div>
+    <div class="a"></div>
+
+   
+    <script>
+        let element=document.querySelectorAll(".a");
+        for(let i  of element){
+        i.addEventListener("mouseover",function(){
+            let a=Math.floor(Math.random()*250);
+            let b=Math.floor(Math.random()*250);
+            let c=Math.floor(Math.random()*250);
+            console.log(element)
+            i.style.backgroundColor = `rgb(${a},${b},${c})`;
+        })
+    }
+    </script>
+
+</body>
+</html>

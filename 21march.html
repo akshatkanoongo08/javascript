@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <textarea id="hello" name="hello" rows="4" cols="50"></textarea>
+    
+    <h1 class="copy"></h1>
+
+    <h2 id="count">count: <span class="len"></span></h2>
+    <input type="text" id="color" placeholder="color">
+
+    <script>
+        // let h=document.querySelector("hello");
+
+        // document.addEventListener('input',function(event){
+        //     console.log(event.target.value);
+        // })
+
+            
+        document.addEventListener('input',function(event){
+            
+            document.querySelector(".copy").innerHTML=event.target.value;
+            let x=document.querySelector(".copy").innerHTML;
+            console.log(x)
+            document.querySelector(".len").innerHTML=x.length;
+           
+            
+        })
+        document.querySelector("#color").onclick=function(event){
+        let color=event.target.value;
+            document.querySelector("#hello").style=`FONT COLOR=${color}`
+        }
+
+    </script>  
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        .clock{
+          display:flex;
+          align-items: center;
+          justify-content: center;
+          /* top:0px;
+          left: 300px; */
+          background-color: yellow;
+        }
+      #hour {
+        display: inline-block;
+      }
+      #minute {
+        display: inline-block;
+      }
+      #second {
+        display: inline-block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="clock">
+      <h1 id="hour"></h1>
+
+      <h1 id="minute"></h1>
+      <h1 id="second"></h1>
+    </div>
+    <script>
+      setInterval(() => {
+       
+        let mydate = new Date();
+        let hours = mydate.getHours();
+        let minutes = mydate.getMinutes();
+        let seconds = mydate.getSeconds();
+        let b = document.querySelector("#hour");
+        b.innerText = `${hours}:`;
+        let c = document.querySelector("#minute");
+        c.innerText = `${minutes}:`;
+        let d = document.querySelector("#second");
+        d.innerText = seconds;
+
+        document.body.appendChild(b);
+        document.body.appendChild(c);
+        document.body.appendChild(d);
+      }, 1000);
+    </script>
+  </body>
+</html>
